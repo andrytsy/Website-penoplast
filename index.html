@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<title></title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="popup_overlay" onClick="popup_out();"></div>
+	<div class="popup_overlay2" onClick="popup_out2();"></div>
+	<div class="popup" id="thx">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Оставьте свои данные, и наш менеджер</div>
+		<div class="popup_h2">свяжется с вами в течение 1 часа.</div>
+		<div class="btn" onClick="popup_out();">закрыть</div>
+	</div>
+	<div class="popup" id="callback">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_title">
+			<div class="popup_h1">Оставьте свои данные, и наш менеджер</div>
+			<div class="popup_h2">свяжется с вами в течение 1 часа.</div>
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<div data-name="callback" class="button noselect btn">Заказать звонок</div>
+		</form>
+	</div>
+	<div class="popup" id="request">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_title">
+			<div class="popup_h1">Оставьте свои данные, и наш менеджер</div>
+			<div class="popup_h2">свяжется с вами в течение 1 часа.</div>
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<? echo $desc_email ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<div data-name="request" class="button noselect btn">Заказать</div>
+		</form>
+	</div>
+	<div class="popup" id="question">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_title">
+			<div class="popup_h1">Оставьте свои данные, и наш менеджер</div>
+			<div class="popup_h2">свяжется с вами в течение 1 часа.</div>
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<? echo $desc_email ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<? echo $desc_ques ?>
+			<textarea class="ques" name="ques" placeholder="Ваш вопрос"></textarea><br>
+			<div data-name="question" class="button noselect btn">Задать вопрос</div>
+		</form>
+	</div>
+	<div class="popup2" id="catalog">
+		<div class="popup_close noselect" onClick="popup_out2();"><span>&nbsp;</span></div>
+		<div class="popup_title">
+			<div class="popup_h1">Оставьте свои данные, и наш менеджер</div>
+			<div class="popup_h2"><span class="choice"></span></div>
+		</div>
+		<div class="content cl">
+			<div class="img_catalog">
+				<img src="img/popup2/rock50.jpg" alt="">
+			</div>
+			<div class="info_catalog">
+				<div class="parameters">
+					<span class="choice">800 x 600 x 50</span>
+					<p>Параметры:</p>
+				</div>
+
+			</div>
+		</div>
+			<div class="titlee">
+				Оставьте свои данные, и наш менеджер<br>
+				свяжется с вами в течение 1 часа.
+			</div>
+		<form>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $phone_field ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<div data-name="catalog" class="button noselect btn">Задать вопрос</div>
+		</form>
+	</div>
+
+	<div class="c1">
+		<div class="wrapp">
+			<div class="header cl">
+				<div class="t_logo"></div>
+				<div class="t_phone">
+					8 (987) <b>089-12-91</b><br>
+					<span onClick="popup('callback','Заказать звонок');">Обратный звонок</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c2">
+		<div class="wrapp">
+			<div class="main_h1">
+				Пенопласт от лучших<br> мировых производителей
+			</div>
+			<div class="main_h2">
+				с доставкой по <b>Нижнему Новгороду<br>и Нижегородской области</b>
+			</div>
+			<div class="boxes">
+				<div class="box">ПСБ-М-15 </div>
+				<div class="box">XPS экструдированный</div>
+			</div>
+			<div class="boxes2">
+				<div class="header">Утеплители<br>со скидкой 25%</div>
+				<div class="desc">Мы запустили специальное предложение<br>для наших покупателей в ноябре!<br><span>Скидка 25% на весь пенопласт<br>в течение всего ноября.</span></div>
+				<div class="btn_first" onclick="popup('request','Скидка 25%');">Воспользоваться предложением</div>
+			</div>
+		</div>
+	</div>
+	<div class="c3">
+		<div class="wrapp">
+			<div class="linecir"></div>
+			<div class="h1">наши преимущества</div>
+			<div class="advantages">
+				<div class="item">
+					<span>от 100 рублей</span>
+					доставка по городу
+				</div>
+				<div class="arrow"></div>
+				<div class="item">
+					<span>10 лет на рынке</span>
+					стройматериалов
+				</div>
+				<div class="arrow"></div>
+				<div class="item">
+					<span>3 000 м<sup>2</sup>  —</span>
+					площадь нашего<br>склада
+				</div>
+				<div class="arrow"></div>
+				<div class="item">
+					<span>17 продавцов-<br>консультантов</span>
+					в магазине
+				</div>
+				<div class="arrow"></div>
+				<div class="item">
+					<span>600 видов<br>продукции</span>
+					всегда на складе
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c4">
+		<div class="wrapp">
+			<div class="h1">Более 50 лет</div>
+			<div class="h2">на мировом рынке строиматериалов!</div>
+			<div class="factors">
+				<div class="fact">
+					<div class="text">
+						<span>Нетоксичность</span>
+						Пенопласт не поддаётся возгоранию<br>
+						и способен без повреждений выдержать<br>
+						температуру до 85 °С.
+					</div>
+					<div class="text">
+						<span>Невоспламеняемость</span>
+						Пенопласт не поддаётся возгоранию<br>
+						и способен без повреждений выдержать<br>
+						температуру до 85 °С.
+					</div>
+					<div class="text">
+						<span>Ветрозащита и звукоизоляция</span>
+						Использование пенопласта при строительстве<br>
+						позволит сэкономить на дополнительной<br>
+						звукоизоляции и ветрозащите конструкций.
+					</div>
+					<div class="text">
+						<span>Влагостойкость</span>
+						Пенопласт не впитывает воду,<br>
+						что позволяет использовать его в прямом<br>
+						контакте с водой и грунтом.
+					</div>
+					<div class="text">
+						<span>Надёжность и долговечность</span>
+						Пенопласт является самым надёжным<br>
+						материалом, который не садится, не изменяется<br>
+						в размерах и не сдвигается в конструкции на протяжении<br> 
+						всего срока эксплуатации.
+					</div>
+				</div>
+			</div>
+				<div class="boxes2">
+					<div class="header">Бесплатная<br>консультация</div>
+					<div class="desc">Наш специалист расскажет вам<br>о всех тонкостях работы с пенопластом<br>и поможет подобрать подходящего<br>производителя.</div>
+					<div class="btn" onclick="popup('request','Скидка 25%');">Получить консультацию специалиста</div>
+				</div>
+		</div>
+	</div>
+	<div class="c5">
+		<div class="wrapp">
+			<div class="linecir2"></div>
+			<div class="h1">8 причин</div>
+			<div class="h2">Работать с нами</div>
+			<div class="plashqa">
+				<div class="item">
+					<em>01.</em><span>Самые низкие цены в<br>Нижегородской области</span>
+					<div class="text">Мы поставляем наши смеси напрямую<br>от производителей, благодаря этому наши цены<br>самые низкие в Нижегородской области.</div>
+				</div>
+				<div class="item">
+					<em>02.</em><span>Доставка в течение<br>2 дней</span>
+					<div class="text">Сформировав ваш заказ, мы<br>
+					доставим его к месту строительных работ<br>
+					в течение 2-ух дней.</div>
+				</div>
+				<div class="item">
+					<em>03.</em><span>Аренда строительного<br>оборудования </span>
+					<div class="text">Мы доставим на строительный объект специальное<br>
+					оборудование: бетономешалки, самосвалы, генераторы,<br>
+					инструменты. Также мы можем предоставить рабочих.</div>
+				</div>
+				<div class="item">
+					<em>04.</em><span>Хранение продукции<br>в соответствии со стандартами</span>
+					<div class="text">Мы строго следуем рекомендациям по хранению товара.<br>
+					Вы получите новый товар, хранившийся в специально<br>
+					оборудованном помещении..</div>
+				</div>
+				<div class="item">
+					<em>05.</em><span>Возврат<br>излишков</span>
+					<div class="text">Если у вас остался лишний строительный материал,<br>
+					купленный у нас, вы сможете забрать его и обменять<br>
+					на другой, который вам понадобится.</div>
+				</div>
+				<div class="item">
+					<em>06.</em><span>Удобное расположение<br>магазина</span>
+					<div class="text">Мы располагаемся на территории центрального рынка,<br>
+					в 300 метрах от Казанской трассы.</div>
+				</div>
+				<div class="item">
+					<em>07.</em><span>Удобное расположение<br>магазина</span>
+					<div class="text">Мы поставляем только безопасную продукцию,<br>не содержащую токсичные вещества и опасные<br>для здоровья компоненты.</div>
+				</div>
+				<div class="item">
+					<em>08.</em><span>Гарантия<br>от производителей</span>
+					<div class="text">Вы можете быть уверены в том, что весь наш товар<br>сертифицирован согласно международным<br>стандартам качества.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c6">
+	
+		<div class="wrapp">
+			<div class="discount25">
+				<div class="title">
+					Расчёт сметы<br>
+					по вашему проекту
+				</div>
+				<div class="title2">
+					Оставьте заявку, и <b>наш менеджер сделает<br>
+					расчёт стройматериалов по вашему<br>
+					проекту</b>. Мы доставим на объект именно<br>
+					то количество материала, которое<br>
+					необходимо для вашего строительства.
+				</div>
+				<div class="btn" onclick="popup('request','Скидка 25%');">Рассчитать проект</div>
+			</div>
+			<div class="linecir3"></div>
+			<div class="h1">
+				Какие материалы<br>
+				<span>мы предлагаем?<br></span>
+			</div>
+			<div class="items">
+				<div class="item item1">
+					<div class="top_block">
+						Пенопласт ПСБ-М-15
+					</div>
+					<div class="text">Наш магазин предлагает своим покупателям только <b>качественные и изготовленные<br> по нормам ГОСТа пенопласты</b>. Вы можете приобрести товар как в единичном<br> экземпляре, так и оптом.</div>
+					<div class="information_block cl">
+						<div class="img_block">
+							<div class="img"></div>
+							<div class="btn btn2" id="btn1" onclick="popup2('catalog','узнать стоимость','Пенопласт ПСБ-М-15','','оформить заказ');">Узнать<br><span>стоимость</span></div>
+						</div>
+						<div class="info">
+							<div class="title pl1">
+								<em>Выберите параметры:</em>
+							</div>
+							<label class="select">
+				            	<select name="xz" id="tip">
+					              	<option value="1000 х 1000 х 20 мм">1000 х 1000 х 20 мм</option>
+					              	<option value="1000 х 1000 х 30 мм">1000 х 1000 х 30 мм</option>
+									<option value="1000 х 1000 х 40 мм">1000 х 1000 х 40 мм</option>
+									<option value="1000 х 1000 х 50 мм">1000 х 1000 х 50 мм</option>
+									<option value="1000 х 1000 х 100 мм">1000 х 1000 х 100 мм</option>
+				            	</select>
+				            	<div class="circle"></div>
+          					</label>
+						</div>
+					</div>
+				</div>
+				<div class="item item2">
+					<div class="top_block">
+						Пенопласт XPS экструдированный
+					</div>
+					<div class="text">
+						Мы работаем только с надёжными компаниями-поставщиками,<br>
+						вы	можете быть <b>уверены в высоком качестве представленной продукции</b>.
+					</div>
+					<div class="information_block cl">
+						<div class="img_block">
+							<div class="img"></div>
+							<div class="btn btn2" id="btn2" onclick="popup2('catalog','узнать стоимость','Пенопласт XPS экструдированный','','оформить заказ');">Узнать<br><span>стоимость</span></div>
+						</div>
+						<div class="info">
+							<div class="title pl2">
+								<em>Выберите параметры:</em>
+							</div>
+							<label class="select">
+				            	<select name="xz" id="tip">
+					              	<option value="580 х 1180 х 50 мм">580 х 1180 х 50 мм</option>
+					              	<option value="580 х 1180 х 30 мм">580 х 1180 х 30 мм</option>
+				            	</select>
+								<div class="circle"></div>
+          					</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c6_1">
+		<div class="wrapp">
+			<div class="h1">Надёжный способ<br> утепления</div>
+			<div class="h2">всех частей дома</div>
+			<div class="main">
+				<div class="text">Защита грунта<br>
+					от промерзания</div>
+				<div class="text">Тепло-<br>
+					и гидроизоляция<br>
+					трубопроводов
+				</div>
+				<div class="text">Отделка стен<br>
+					и потолков
+				</div>
+				<div class="text">Теплоизоляция крыш,<br>
+					мансард, чердачных<br>
+					перекрытий
+				</div>
+				<div class="text">Утепление,<br>
+					звуко-виброизоляция<br>
+					полов и межэтажных
+					перекрытий
+				</div>
+				<div class="text">Утепление<br>
+					наружных стен<br>
+					зданий
+				</div>
+				<div class="text">Тепло и гидроизоляция<br>
+					подвалов и цокольных<br>
+					этажей
+				</div>
+			</div>
+			<div class="foot_text">С помощью теплоизолирующих пенопластовых<br>
+				блоков вы сможете защитить от холода<br>
+				все участки своего дома! 
+			</div>
+		</div>
+	</div>
+	<div class="c7">
+		<div class="wrapp">
+			<div class="h1">Благотворительные<br>проекты</div>
+			<div class="fotos">
+				<div class="left cl">
+					<div class="foto">
+						<div class="hov1">
+							«Детско-юношеский<br>хоккейный клуб «Ровесник»
+						</div>
+					</div>
+					<div class="foto">
+						<div class="hov1">
+							Социально-реабилитационный центр<br>для несовершеннолетних Лысковской обл.
+						</div>
+					</div>
+				</div>
+				<div class="foto_center">
+					<div class="hov1">
+						Помощь вдове<br>советского писателя
+					</div>
+				</div>
+				<div class="right">
+					<div class="foto">
+						<div class="hov1">
+							Лысковская<br>спортивная организация
+						</div>
+					</div>
+					<div class="foto">
+						<div class="hov1">
+							Лысковский собор
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="descr">
+				Компания «СтройБат» организовала более<br>
+				17 благотворительных проектов для нижегородских<br>
+				детских домов, спортивных программ и церквей.
+			</div>
+		</div>
+	</div>
+	<div class="c8">
+		<div class="wrapp">
+			<div class="h1">
+				Благодарственные<br>письма
+			</div>
+			<div class="serts">
+				<div class="sert">
+					<div class="hover_border">
+						<a href="img/c8/1.jpg" class="fancybox"></a>
+					</div>
+				</div>
+				<div class="sert">
+					<div class="hover_border">
+						<a href="img/c8/2.jpg" class="fancybox"></a>
+					</div>
+				</div>
+				<div class="sert">
+					<div class="hover_border">
+						<a href="img/c8/3.jpg" class="fancybox"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c9">
+		<div class="wrapp">
+			<div class="h1">контакты</div>
+			<div class="map">
+				<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=Cqo7fVHREwKVK6FMlmODyswep8TL4Dax&width=894&height=481"></script>
+			</div>
+		</div>
+	</div>
+	<div class="c10">
+		<div class="wrapp">
+			<div class="footer cl">
+				<div class="address">
+					<span>Адрес:</span>
+					Нижегородская область,<br>
+					г.  Лысково,  ул. Мичурина<br>
+					дом 56 «а»
+				</div>
+				<div class="f_phone">
+					<span>Телефон:</span>
+					8 (83149) <b>5-48-92</b><br>
+					<span onClick="popup('callback','Заказать звонок');"><i>Обратный звонок</i></span>
+				</div>
+				<div class="email">
+					<span>E-mail:</span>
+					m.strojbat@yandex.ru
+				</div>
+				<div class="mode">
+					<span>Режим работы:</span>
+					с <b>8-00</b> до <b>18-00</b><br>
+					в выходные с <b>8-00</b> до <b>16-00</b>
+				</div>
+			</div>
+			<div class="footer2 cl">
+				<div class="pr">© СТРОЙБАТ, 2016 Все права защищены.</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="prefix" class="prefix" value="<? echo $prefix; ?>">
+	<input type="hidden" name="phone_format" class="phone_format" value="<? echo $phone_format; ?>">
+	<input type="hidden" name="referer" value="<? echo $_SERVER['HTTP_REFERER'] ?>">
+	<input type="hidden" name="ref_url" value="<? echo $_SERVER['QUERY_STRING'] ?>">
+	<input type="hidden" class="formname" name="formname" value="">
+	<input type="hidden" class="sitename" name="sitename" value="<? echo $sitename; ?>">
+	<input type="hidden" class="emailsarr" name="emailsarr" value="<? echo $emailsArr; ?>">
+	
+	<script type="text/javascript" src="js/plugins.js"></script>
+</body>
+</html>
